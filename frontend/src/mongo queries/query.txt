@@ -1,0 +1,6 @@
+// to update all with a new field(even existing)
+
+db.users.update({},
+                          {$set : {"Role":"basic"}},
+                          {upsert:false,
+                          multi:true})
